@@ -1,0 +1,18 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+coverage/
+.theypaid-ai/
+*.wallet.json
+*.keystore.json
+
+# فایل‌های پژوهشی محلی؛ جزو خروجی‌های پروژه نیستند.
+.playwright-mcp/
+research-plugins/
+sdk-package/
+npm-latest.json
+theypaid-sdk-1.2.0.tgz
+pnpm-lock.yaml
+pnpm-workspace.yaml

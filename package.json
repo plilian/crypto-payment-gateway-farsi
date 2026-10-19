@@ -1,0 +1,51 @@
+{
+  "name": "theypaid-ai",
+  "version": "0.1.0",
+  "private": false,
+  "description": "سرور MCP و Skill عامل هوش مصنوعی برای اتصال به درگاه پرداخت TheyPaid",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "theypaid-mcp": "dist/mcp/index.js",
+    "theypaid-wallet-recover": "dist/src/wallet/recover.js"
+  },
+  "files": [
+    "dist",
+    "skill",
+    "docs",
+    "examples",
+    "README.md",
+    "LICENSE",
+    "LICENSE.fa.md",
+    "CONTRIBUTING.md"
+  ],
+  "scripts": {
+    "clean": "node scripts/clean.mjs",
+    "build": "node scripts/clean.mjs && tsc -p tsconfig.json",
+    "start": "node dist/mcp/index.js",
+    "dev": "tsx mcp/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "@scure/base": "2.4.0",
+    "@scure/bip32": "2.4.0",
+    "@scure/bip39": "2.4.0",
+    "@ton/core": "0.63.0",
+    "@ton/crypto": "3.3.0",
+    "@ton/ton": "16.3.0",
+    "ethers": "^6.15.0",
+    "theypaid-sdk": "1.2.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0"
+  }
+}
